@@ -6,19 +6,39 @@ class Comment extends Model {};
 //include the commenter's username and the date created
 Comment.init(
     {
+        id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            primaryKey: true,
+            autoIncrement: true,
+        },
         body: {
             type: DataTypes.STRING,
+            allowNull: false,
         },
-        blog_id: {
+        user_id: {
             type: DataTypes.INTEGER,
             references: {
-              model: 'blog',
+                model: 'user',
+                key: 'id',
+            },
+        },
+        post_id: {
+            type: DataTypes.INTEGER,
+            references: {
+              model: 'post',
               key: 'id',
             },
         },
-        sequelize,
-        modelName: 'comment',
     },
+    {
+        sequelize,
+        timestamps: true,
+        createdAt: 'date_created',
+        updatedAt: false,
+        freezeTableName: true,
+        modelName: 'comment',
+    }
 );
 
 module.exports = Comment;

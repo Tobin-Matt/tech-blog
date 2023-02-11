@@ -1,0 +1,14 @@
+[
+    {
+        "title": "First blog post",
+        "content": "The content of the blog post will be placed here"
+    },
+    {
+        "title": "Second blog post",
+        "content": "The content of the blog post will be placed here"
+    },
+    {
+        "title": "Third blog post",
+        "content": "The content of the blog post will be placed here"
+    }
+]
