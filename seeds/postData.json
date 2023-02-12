@@ -1,14 +1,17 @@
 [
     {
         "title": "First blog post",
-        "content": "The content of the blog post will be placed here"
+        "content": "The content of the blog post will be placed here",
+        "user_id": 1
     },
     {
         "title": "Second blog post",
-        "content": "The content of the blog post will be placed here"
+        "content": "The content of the blog post will be placed here",
+        "user_id": 2
     },
     {
         "title": "Third blog post",
-        "content": "The content of the blog post will be placed here"
+        "content": "The content of the blog post will be placed here",
+        "user_id": 3
     }
 ]
