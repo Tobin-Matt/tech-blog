@@ -28,7 +28,7 @@ router.get('/', async (req, res) => {
     }
 });
 
-router.get('./post/:id', async (req, res) => {
+router.get('./post/:id', withAuth, async (req, res) => {
     try {
         const postData = await Post.findByPk(req.params.id, {
             include: [
@@ -49,6 +49,8 @@ router.get('./post/:id', async (req, res) => {
         res.status(500).json(err);
     }
 })
+
+//create a GET route to render the Dashboard page.
 
 router.get('/login', (req, res) => {
     if (req.session.loggedIn) {
