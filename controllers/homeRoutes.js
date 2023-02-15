@@ -48,7 +48,7 @@ router.get('./post/:id', withAuth, async (req, res) => {
     } catch (err) {
         res.status(500).json(err);
     }
-})
+});
 
 //create a GET route to render the Dashboard page.
 
@@ -59,7 +59,16 @@ router.get('/login', (req, res) => {
     }
 
     res.render('login');
-})
+});
+
+router.get('/signup', (req, res) => {
+    if (req.session.loggedIn) {
+        res.redirect('/');
+        return;
+    }
+
+    res.render('signup');
+});
 
 module.exports = router;
 
