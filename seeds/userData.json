@@ -1,17 +1,14 @@
 [
     {
         "username": "MTobin",
-        "email": "test@email.com",
         "password": "password12345"
     },
     {
         "username": "JSmith",
-        "email": "jsmith@email.com",
         "password": "catdog123"
     },
     {
         "username": "JJohnson",
-        "email": "jjohn@email.com",
         "password": "notapassword123"
     }
 ]
